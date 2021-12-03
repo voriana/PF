@@ -39,12 +39,10 @@ namespace PF.InterfazUsuario
         private void CargaLista()
         {
             _lstPlazos.DataSource = null;
-            _plazos = _plazoNegocio.TraerPlazo();
+            _plazos = _plazoNegocio.TraerPlazoConTipo();
             _lstPlazos.DataSource=_plazos;
             _lstPlazos.DisplayMember = "MostrarEnLista";
             ActualizarCalculos();
-           
-
         }
 
         private void CargaCombo()
@@ -60,7 +58,6 @@ namespace PF.InterfazUsuario
             {
                 _txtTasa.Text = ((TipoPlazo)_cbTipoPf.SelectedItem).Tasa.ToString();
             }
-          
         }
 
         private void  Validaciones()
@@ -137,11 +134,11 @@ namespace PF.InterfazUsuario
         private void Limpiar()
         {
             ((TipoPlazo)_cbTipoPf.SelectedItem).Id = 0;
+            _txtTasa.Clear();
             _txtCapitalInv.Clear();
             _txtDias.Clear();
             _txtInteresARecibir.Clear();
             _txtMontoFinal.Clear();
-            
         }
 
         private void _btnLimpiar_Click(object sender, EventArgs e)

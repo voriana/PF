@@ -22,6 +22,22 @@ namespace PF.Negocio
             List<PlazoFijo> _plazos = _pFMapper.GetplazoFijos();
             return _plazos;
         }
+        public List<PlazoFijo> TraerPlazoConTipo()
+        {
+            List<PlazoFijo> _plazos = _pFMapper.GetplazoFijos();
+            List<TipoPlazo> _tipos = TipoPfHelper.ListarTipos();
+            foreach(PlazoFijo pf in _plazos)
+            {
+                foreach (TipoPlazo tipo in _tipos)
+                {
+                    if (pf.Tipo == tipo.Id)
+                    {
+                        pf.TipoPlazo = tipo;
+                    }
+                }
+            }
+            return _plazos;
+        }
 
         public PlazoFijo Simular(TipoPlazo tipo, double tasa, double capital , int dias) 
         {

@@ -15,6 +15,7 @@ namespace PF.Entidades.Dominio
         private int _dias;
         private double _capitalInicial;
         private string _usuario;
+        private TipoPlazo _tipoPlazo;
 
         public PlazoFijo()
         {
@@ -39,6 +40,8 @@ namespace PF.Entidades.Dominio
         public double CapitalInicial { get => _capitalInicial; set => _capitalInicial = value; }
         public string Usuario { get => _usuario; set => _usuario = value; }
 
+        public TipoPlazo TipoPlazo { get => _tipoPlazo; set => _tipoPlazo = value; }
+
         //propiedades autoCalculables
         public double Interes
         {
@@ -60,10 +63,11 @@ namespace PF.Entidades.Dominio
         {
             get
             {
-                return $"Id){this._id}-Dias:{this._dias} -ARS: CapitalInicial " +
-                    $"{this.CapitalInicial}({this.Interes.ToString("0.00")})Tipo Plazo fijo:{this.Tipo}";
+                return $"Id){this._id}-Dias:{this._dias} -ARS:$" +
+                    $"{this.CapitalInicial}(Interes:{this.Interes.ToString("0.00")})Tipo:{this.TipoPlazo.Descripcion}";
             }
         }
 
+       
     }
 }

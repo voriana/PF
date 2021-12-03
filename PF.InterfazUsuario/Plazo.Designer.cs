@@ -42,15 +42,15 @@ namespace PF.InterfazUsuario
             this.label6 = new System.Windows.Forms.Label();
             this._txtMontoFinal = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this._btnSimular = new System.Windows.Forms.Button();
-            this._btnLimpiar = new System.Windows.Forms.Button();
             this._btnAlta = new System.Windows.Forms.Button();
+            this._btnLimpiar = new System.Windows.Forms.Button();
+            this._btnSimular = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this._lstPlazos = new System.Windows.Forms.ListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this._txtMontoTotal = new System.Windows.Forms.TextBox();
             this._txtComisonTotal = new System.Windows.Forms.TextBox();
+            this._txtMontoTotal = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this._lstPlazos = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -178,15 +178,15 @@ namespace PF.InterfazUsuario
             this.panel1.Size = new System.Drawing.Size(371, 402);
             this.panel1.TabIndex = 12;
             // 
-            // _btnSimular
+            // _btnAlta
             // 
-            this._btnSimular.Location = new System.Drawing.Point(28, 309);
-            this._btnSimular.Name = "_btnSimular";
-            this._btnSimular.Size = new System.Drawing.Size(99, 23);
-            this._btnSimular.TabIndex = 12;
-            this._btnSimular.Text = "SIMULAR";
-            this._btnSimular.UseVisualStyleBackColor = true;
-            this._btnSimular.Click += new System.EventHandler(this._btnSimular_Click);
+            this._btnAlta.Location = new System.Drawing.Point(28, 355);
+            this._btnAlta.Name = "_btnAlta";
+            this._btnAlta.Size = new System.Drawing.Size(246, 23);
+            this._btnAlta.TabIndex = 14;
+            this._btnAlta.Text = "ALTA";
+            this._btnAlta.UseVisualStyleBackColor = true;
+            this._btnAlta.Click += new System.EventHandler(this._btnAlta_Click);
             // 
             // _btnLimpiar
             // 
@@ -198,15 +198,15 @@ namespace PF.InterfazUsuario
             this._btnLimpiar.UseVisualStyleBackColor = true;
             this._btnLimpiar.Click += new System.EventHandler(this._btnLimpiar_Click);
             // 
-            // _btnAlta
+            // _btnSimular
             // 
-            this._btnAlta.Location = new System.Drawing.Point(28, 355);
-            this._btnAlta.Name = "_btnAlta";
-            this._btnAlta.Size = new System.Drawing.Size(246, 23);
-            this._btnAlta.TabIndex = 14;
-            this._btnAlta.Text = "ALTA";
-            this._btnAlta.UseVisualStyleBackColor = true;
-            this._btnAlta.Click += new System.EventHandler(this._btnAlta_Click);
+            this._btnSimular.Location = new System.Drawing.Point(28, 309);
+            this._btnSimular.Name = "_btnSimular";
+            this._btnSimular.Size = new System.Drawing.Size(99, 23);
+            this._btnSimular.TabIndex = 12;
+            this._btnSimular.Text = "SIMULAR";
+            this._btnSimular.UseVisualStyleBackColor = true;
+            this._btnSimular.Click += new System.EventHandler(this._btnSimular_Click);
             // 
             // panel2
             // 
@@ -215,28 +215,26 @@ namespace PF.InterfazUsuario
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this._lstPlazos);
-            this.panel2.Location = new System.Drawing.Point(432, 12);
+            this.panel2.Location = new System.Drawing.Point(389, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 402);
+            this.panel2.Size = new System.Drawing.Size(375, 402);
             this.panel2.TabIndex = 15;
             // 
-            // _lstPlazos
+            // _txtComisonTotal
             // 
-            this._lstPlazos.FormattingEnabled = true;
-            this._lstPlazos.Location = new System.Drawing.Point(0, 0);
-            this._lstPlazos.Name = "_lstPlazos";
-            this._lstPlazos.Size = new System.Drawing.Size(332, 303);
-            this._lstPlazos.TabIndex = 0;
+            this._txtComisonTotal.Enabled = false;
+            this._txtComisonTotal.Location = new System.Drawing.Point(181, 360);
+            this._txtComisonTotal.Name = "_txtComisonTotal";
+            this._txtComisonTotal.Size = new System.Drawing.Size(121, 20);
+            this._txtComisonTotal.TabIndex = 16;
             // 
-            // label7
+            // _txtMontoTotal
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 319);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Monto Total";
+            this._txtMontoTotal.Enabled = false;
+            this._txtMontoTotal.Location = new System.Drawing.Point(181, 321);
+            this._txtMontoTotal.Name = "_txtMontoTotal";
+            this._txtMontoTotal.Size = new System.Drawing.Size(121, 20);
+            this._txtMontoTotal.TabIndex = 15;
             // 
             // label8
             // 
@@ -248,21 +246,23 @@ namespace PF.InterfazUsuario
             this.label8.TabIndex = 2;
             this.label8.Text = "Comision Total";
             // 
-            // _txtMontoTotal
+            // label7
             // 
-            this._txtMontoTotal.Enabled = false;
-            this._txtMontoTotal.Location = new System.Drawing.Point(181, 321);
-            this._txtMontoTotal.Name = "_txtMontoTotal";
-            this._txtMontoTotal.Size = new System.Drawing.Size(121, 20);
-            this._txtMontoTotal.TabIndex = 15;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(15, 319);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Monto Total";
             // 
-            // _txtComisonTotal
+            // _lstPlazos
             // 
-            this._txtComisonTotal.Enabled = false;
-            this._txtComisonTotal.Location = new System.Drawing.Point(181, 360);
-            this._txtComisonTotal.Name = "_txtComisonTotal";
-            this._txtComisonTotal.Size = new System.Drawing.Size(121, 20);
-            this._txtComisonTotal.TabIndex = 16;
+            this._lstPlazos.FormattingEnabled = true;
+            this._lstPlazos.Location = new System.Drawing.Point(0, 0);
+            this._lstPlazos.Name = "_lstPlazos";
+            this._lstPlazos.Size = new System.Drawing.Size(372, 290);
+            this._lstPlazos.TabIndex = 0;
             // 
             // Plazo
             // 
